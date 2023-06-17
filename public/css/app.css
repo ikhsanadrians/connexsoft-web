@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Jetbrains-Mono';
+  src : url('../fonts/JetBrainsMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Mona';
+    src: url('../fonts/Mona-Sans-ExtraBold.ttf');
+}
+
+
+body {
+   background-color: #22222e;
+}
+
+.cnnx {
+ font-family: 'Jetbrains-Mono' ;
+}
+
+.hero {
+    /* position : absolute; */
+    object-fit: cover;
+    filter: grayscale(50%) brightness(40%) contrast(113%);
+    -webkit-filter: grayscale(50%) brightness(40%) contrast(113%);
+    -moz-filter: grayscale(50%) brightness(40%) contrast(113%);
+}
+
+.header {
+    background-color:rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    z-index: 99;
+    /* border-bottom : 1px solid rgb(203 213 225) ; */
+}
+
+
+.nav-links {
+  cursor: pointer;
+}
+
