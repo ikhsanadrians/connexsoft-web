@@ -8,6 +8,10 @@
     src: url('../fonts/Mona-Sans-ExtraBold.ttf');
 }
 
+@font-face {
+  font-family: 'MonaReg';
+  src: url('../fonts/Mona.ttf');
+}
 
 body {
    background-color: #22222e;

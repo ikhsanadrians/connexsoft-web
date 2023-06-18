@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from './components/navbar';
 import Hero from './components/hero';
+import Content from './components/content';
+import Footer from './components/footer';
 
 
 const Home = () => {
@@ -8,10 +10,11 @@ const Home = () => {
     <div id="app">
       <Navbar></Navbar>
       <Hero></Hero>
-      <div className="mb-64">
-
-      </div>
-    </div>
+      <Content></Content>
+      <Footer></Footer>
+      {/* <div className="mb-64">
+      </div> */}
+    </div>   
   )
 }
 
