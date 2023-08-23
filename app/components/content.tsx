@@ -114,7 +114,7 @@ export default function Content() {
                                 </div>
                                 <div className="articles-links text-slate-400">
                                     <p>Selengkapnya</p>
-                                </div>
+                                  </div>
                             </div>
 
                         </div>
