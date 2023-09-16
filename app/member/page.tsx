@@ -46,6 +46,7 @@ const Member = () => {
               <Card key={key}>
                 <div className="wrappers flex text-gray-200 gap-6 items-center">
                   <Image
+                    className="flex self-start"
                     src={
                       item.member_picture === ""
                         ? "https://res.cloudinary.com/dewnyzbmg/image/upload/v1694892325/wallpapers-fotor-202309172252_uf9ggg.png"
