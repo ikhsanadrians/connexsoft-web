@@ -5,6 +5,7 @@ import Image from "next/image";
 import LogoConnexsoft from "../../public/images/connexsoft.png";
 import { Roboto } from "next/font/google";
 import "../../public/css/app.css";
+import Link from "next/link";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -31,12 +32,12 @@ function Navbar() {
           </h1>
         </div>
         <div className="nav-menu lg:block md:block hidden">
-          <ul className="nav-links flex flex-row gap-8 font-medium text-white">
-            <li className="duration-200 hover:-translate-y-1">Home</li>
-            <li className="duration-200 hover:-translate-y-1">Daftar Member</li>
-            <li className="duration-200 hover:-translate-y-1">Galleri</li>
-            <li className="duration-200 hover:-translate-y-1">Artikel</li>
-            <li className="duration-200 hover:-translate-y-1">Tentang Kami</li>
+          <ul className="nav-links flex flex-row gap-8 font-medium text-gray-200">
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/"}>Home</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/member"}>Daftar Member</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/gallery"}>Galleri</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/articles"}>Artikel</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/projects"}>Project</Link></li>
           </ul>
         </div>
       </div>
