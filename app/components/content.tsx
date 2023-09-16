@@ -139,7 +139,7 @@ export default function Content() {
                     <Card>
                         <div className="article-card-wrapper flex flex-col justify-between relative w-full h-full">
                             <div className="article-title text-slate-300">
-                                <h1>Apakah PHP Bahasa Pemrograman yang cringe?</h1>
+                                <h1>Apakah NodeJS Bagus Untuk Backend?</h1>
                             </div>
                             <div className="articles-info flex items-center justify-between">
                                 <div className="article-writer flex items-center flex-row">
