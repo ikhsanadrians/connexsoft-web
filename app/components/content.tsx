@@ -3,9 +3,7 @@ import starsBg from "../../public/images/bg-stars-1.webp";
 import Image from "next/image";
 import Card from './cards/cards';
 import Link from "next/link";
-import rlPic from "../../public/images/memberspp/rlorenzo.png";
-import adrnsPic from "../../public/images/memberspp/adrians.png";
-import koko from "../../public/images/memberspp/koko.png";
+
 
 export default function Content() {
     return (
@@ -47,7 +45,7 @@ export default function Content() {
                     <Card>
                         <div className="members-wrapper flex flex-row justify-center  gap-4 w-full h-full items-center">
                             <div className="member-pictures">
-                                <Image src={koko} height={80} alt="greseks"></Image>
+                                <Image src={"https://res.cloudinary.com/dewnyzbmg/image/upload/v1694887671/coco_jtevn8.png"} height={80} width={80} alt="greseks"></Image>
                             </div>
                             <div className="member-info">
                                 <div className="member-name text-white">
@@ -63,14 +61,14 @@ export default function Content() {
                     <Card>
                         <div className="members-wrapper flex flex-row justify-center  gap-4 w-full h-full items-center">
                             <div className="member-pictures">
-                                <Image src={adrnsPic} height={80} alt="rlorenzo"></Image>
+                                <Image className="brightness-75 contrast-125" src={"https://res.cloudinary.com/dewnyzbmg/image/upload/v1694922878/DSCF0963-fotor-20230917105424_ex6fpl.png"} height={80} width={80} alt="rlorenzo"></Image>
                             </div>
                             <div className="member-info">
                                 <div className="member-name text-white">
-                                    <h1>Ikhsan Adriansyah</h1>
+                                    <h1>M Raya Arizky</h1>
                                 </div>
                                 <div className="member-roles text-slate-500">
-                                    <p>Backend Developer</p>
+                                    <p>Mobile App Developer</p>
                                 </div>
 
                             </div>
@@ -79,14 +77,14 @@ export default function Content() {
                     <Card>
                         <div className="members-wrapper flex flex-row justify-center  gap-4 w-full h-full items-center">
                             <div className="member-pictures">
-                                <Image src={rlPic} height={80} alt="rlorenzo"></Image>
+                                <Image src={"https://res.cloudinary.com/dewnyzbmg/image/upload/v1694923079/20230615_141545-fotor-20230917105745_dw47kh.png"} height={80} width={80} alt="rlorenzo"></Image>
                             </div>
                             <div className="member-info">
                                 <div className="member-name text-white">
-                                    <h1>Rafael Lorenzo</h1>
+                                    <h1>M Thomy Hasyimi</h1>
                                 </div>
                                 <div className="member-roles text-slate-500">
-                                    <p>UI/UX Designer</p>
+                                    <p>Front End Developer</p>
                                 </div>
 
                             </div>
@@ -109,7 +107,8 @@ export default function Content() {
                                 <h1>Tips Belajar Game Development</h1>
                             </div>
                             <div className="articles-info flex items-center justify-between">
-                                <div className="article-writer flex items-center flex-row">
+                                <div className="article-writer flex gap-2 items-center flex-row">
+                                    <Image alt="faris" width={30} height={30} src={"https://res.cloudinary.com/dewnyzbmg/image/upload/v1694891070/WhatsApp_Image_2023-08-11_at_4.27.00_AM-fotor-202309172411_qxliky.png"}></Image>
                                     <p className="text-slate-400">Faris Maulana</p>
                                 </div>
                                 <div className="articles-links text-slate-400">
@@ -126,7 +125,8 @@ export default function Content() {
                                 <h1>Tren UI/UX 2023 untuk Developer</h1>
                             </div>
                             <div className="articles-info cursor-pointer flex items-center justify-between">
-                                <div className="article-writer flex items-center flex-row">
+                                <div className="article-writer flex gap-2 items-center flex-row">
+                                    <Image alt="lorenzax" width={30} height={30} src={"https://res.cloudinary.com/dewnyzbmg/image/upload/v1694924519/IMG_20230713_151213-fotor-20230917112143_i6v8nw.png"}></Image>
                                     <p className="text-slate-400">Rafael Lorenzo</p>
                                 </div>
                                 <div className="articles-links text-slate-400">
@@ -142,7 +142,8 @@ export default function Content() {
                                 <h1>Apakah NodeJS Bagus Untuk Backend?</h1>
                             </div>
                             <div className="articles-info flex items-center justify-between">
-                                <div className="article-writer flex items-center flex-row">
+                                <div className="article-writer gap-2 flex items-center flex-row">
+                                   <Image alt="ikhsan" width={30} height={30} src={"https://res.cloudinary.com/dewnyzbmg/image/upload/v1694922691/adriansmilano-fotor-2023091710519_hlspkf.png"}></Image>
                                     <p className="text-slate-400">Adrians Ikhsan</p>
                                 </div>
                                 <div className="articles-links text-slate-400">

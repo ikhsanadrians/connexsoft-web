@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function footer() {
   return (
-    <footer className="bg-black mt-12 min-h-64 max-h-full">
+    <footer className="bg-black mt-12 min-h-64 max-h-full z-99">
       <div className="container mx-auto py-8 lg:px-0 px-8 flex flex-col md:flex-row lg:flex-row justify-between">
         <div className="connexsoft-header flex flex-col">
           <div className="connexicon flex flex-row gap-1 items-center">
