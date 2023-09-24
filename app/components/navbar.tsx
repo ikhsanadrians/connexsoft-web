@@ -52,11 +52,11 @@ function Navbar() {
     </header>
     <div className={`nav-btm ${navMobileBtn ? 'block' : 'hidden'} duration-100 bg-black w-full h-[20rem] sticky top-20 z-40 flex items-center`}>
     <ul className="nav-links flex flex-col gap-6 font-medium text-gray-200 p-8">
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/"}>Home</Link></li>
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/members"}>Daftar Member</Link></li>
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/gallery"}>Galleri</Link></li>
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/articles"}>Artikel</Link></li>
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/projects"}>Project</Link></li>
+            <li><Link href={"/"}>Home</Link></li>
+            <li><Link href={"/members"}>Daftar Member</Link></li>
+            <li><Link href={"/gallery"}>Galleri</Link></li>
+            <li><Link href={"/articles"}>Artikel</Link></li>
+            <li><Link href={"/projects"}>Project</Link></li>
           </ul>
     </div>
     </>
