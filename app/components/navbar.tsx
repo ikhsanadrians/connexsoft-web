@@ -31,7 +31,7 @@ function Navbar() {
   return (
     <>
     <header className={`sticky top-0 z-99 ${scrolled && 'header drop-shadow-lg'}`}>
-      <div className="header-wrapper container lg:px-0 md:px-0 px-6 mx-auto  w-full h-12 py-10 flex items-center justify-between">
+      <div className="header-wrapper container lg:px-11 md:px-0 px-6 mx-auto  w-full h-12 py-10 flex items-center justify-between">
         <div className="title flex items-center z-30">
           <Image src={LogoConnexsoft} alt="" height={35} />
           <h1 className="cnnx lg:block md:block hidden text-white pl-2 font-bold text-[20px]">

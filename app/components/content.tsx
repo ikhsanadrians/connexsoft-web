@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Content() {
     return (
-        <div className="container mx-auto py-12 lg:px-0 px-8 relative overflow-hidden">
+        <div className="container mx-auto py-12 lg:px-11 px-8 relative overflow-hidden">
             <div className="text-wrappers who-are-we">
                 <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Siapa Kita?</h1>
                 <p className="text-white opacity-70 mt-4">

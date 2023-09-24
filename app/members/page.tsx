@@ -38,7 +38,7 @@ const Member = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto mt-6 lg:py-0 lg:px-0 py-4 px-8 pb-8 relative">
+      <div className="container mx-auto mt-6 lg:py-0 lg:px-11 py-4 px-8 pb-8 relative">
      <Image alt="stars" src={Stars} className="absolute lg:block hidden top-0 left-0 h-[100%] select-none pointer-events-none"/>
      <Image alt="drone" src={Drone} className="absolute lg:block hidden right-0 mr-8 drop-shadow-lg select-none pointer-events-none" height={280} width={280}/>
      <Image alt="single-stars" src={SingleStars} className="brightness-0 invert-[1] absolute -top-14 -left-36 opacity-20 select-none pointer-events-none"/>
