@@ -1,53 +1,37 @@
 "use client"
 
 import Navbar from "../components/navbar";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import { AiOutlineExpandAlt } from "react-icons/ai";
 import Footer from "../components/footer";
+import axios from "axios";
+
+type Gallery = {
+  imageUrl: string,
+  type: string,
+  title: string
+}
 
 const Gallery = () => {
+  const [galleryValue,setGalleryValue] = useState<Gallery[]>([]);
   const [open, setOpen] = useState<boolean>(false);
   const [image, setImage] = useState<string>("");
   
-  type Gallery = {
-    imageUrl: string,
-    type: string,
-    title: string
+ 
+  const getGalleryValue = () => {
+      axios.get("https://connexsoft-team.github.io/api/v1/gallery.json").
+      then((response)=>setGalleryValue(response.data)).
+      catch((err)=>console.error("Error While Fetching Data!"))
   }
 
-  const galleryTab : Gallery[] = [
-        {
-          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695867533/edfcgcgo9kptxfyudb7a.jpg",
-          type: "Milad",
-          title: "Ardiyan Syahbani",
-        },
-        {
-          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695867527/wuoxwmxm6pdrq1ni0fyi.jpg",
-          type: "Connexsoft",
-          title: "Testing Jaket",
-        },
-        {
-          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695868059/IMG_20230413_201615_wwzsvo.jpg",
-          type: "Event",
-          title: "Bukber Connexsoft 2023",
-        },
-        {
-          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695872144/IMG_20230816_075713_352_zal1m4.jpg",
-          type: "Event",
-          title: "17 Agustusan",
-        },
-        {
-          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695873204/WhatsApp_Image_2023-07-21_at_7.06.01_AM_tptfm8.jpg",
-          type: "Event",
-          title: "Pembinaan Wali Kelas",
-        },
-      ];
+  useEffect(()=>{
+     getGalleryValue()
+  },[])
 
-      
-  const slides = galleryTab.map((item) => ({
+  const slides = galleryValue?.map((item) => ({
     src: item.imageUrl,
     width: 3840,
     height: 2560,
@@ -60,8 +44,7 @@ const Gallery = () => {
     ],
   }));
 
-  console.log(image)
-
+  
   return (
     <>
       <Navbar />
@@ -70,10 +53,10 @@ const Gallery = () => {
         <p className="text-gray-400 w-full lg:w-1/2">Welcome to ConnexSoft's photo gallery, where we showcase a collection of captivating images. Explore our visual journey through these photos.</p>
         <div className="w-full">
         <div className="mt-8">
-          <div className="flex flex-col md:grid md:grid-cols-2 h-full gap-0 flex-wrap mx-2 md:mx-0">
-            {galleryTab.map((x, index) => {
+          <div className="flex flex-col md:grid md:grid-cols-2 h-full gap-0 flex-wrap lg:mx-2 md:mx-0">
+            {galleryValue.map((x, index) => {
               return (
-                <div key={index} className="md:h-[40vw] m-2 h-screen relative">
+                <div key={index} className="md:h-[30vw] m-2 h-screen relative">
                   <div className="group h-full">
                     <div
                       className="bg-cover bg-center h-full w-full bg-no-repeat"
@@ -103,12 +86,11 @@ const Gallery = () => {
         </div>
         <Lightbox
           className={'p-8'}
-          index={galleryTab.findIndex((x) => x.imageUrl === image)}
+          index={galleryValue.findIndex((x) => x.imageUrl === image)}
           open={open}
           close={() => setOpen(false)}
           plugins={[Zoom]}
           slides={slides}
-
         />
       </div>
       </div>
