@@ -41,10 +41,10 @@ function Navbar() {
         <div className="nav-menu lg:block md:block hidden">
           <ul className="nav-links flex flex-row gap-8 font-medium text-gray-200">
             <li className="duration-200 hover:-translate-y-1"><Link href={"/"}>Home</Link></li>
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/members"}>Daftar Member</Link></li>
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/gallery"}>Galleri</Link></li>
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/articles"}>Artikel</Link></li>
-            <li className="duration-200 hover:-translate-y-1"><Link href={"/projects"}>Project</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/members"}>Members</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/gallery"}>Gallery</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/articles"}>Articles</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"/projects"}>Projects</Link></li>
           </ul>
         </div>
         <TiThMenu onClick={navMobileHandler} color="white" size={25} className="block lg:hidden md:hidden"/>
