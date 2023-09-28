@@ -6,6 +6,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import { AiOutlineExpandAlt } from "react-icons/ai";
+import Footer from "../components/footer";
 
 const Gallery = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -19,29 +20,29 @@ const Gallery = () => {
 
   const galleryTab : Gallery[] = [
         {
-          imageUrl: "https://themewagon.github.io/snapshot/images/model-1.jpg",
-          type: "Nature",
-          title: "Beautiful Work",
+          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695867533/edfcgcgo9kptxfyudb7a.jpg",
+          type: "Milad",
+          title: "Ardiyan Syahbani",
         },
         {
-          imageUrl: "https://themewagon.github.io/snapshot/images/model-2.jpg",
-          type: "Nature",
-          title: "Beautiful Work",
+          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695867527/wuoxwmxm6pdrq1ni0fyi.jpg",
+          type: "Connexsoft",
+          title: "Testing Jaket",
         },
         {
-          imageUrl: "https://themewagon.github.io/snapshot/images/model-3.jpg",
-          type: "Nature",
-          title: "Beautiful Work",
+          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695868059/IMG_20230413_201615_wwzsvo.jpg",
+          type: "Event",
+          title: "Bukber Connexsoft 2023",
         },
         {
-          imageUrl: "https://themewagon.github.io/snapshot/images/model-4.jpg",
-          type: "Nature",
-          title: "Beautiful Work",
+          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695872144/IMG_20230816_075713_352_zal1m4.jpg",
+          type: "Event",
+          title: "17 Agustusan",
         },
         {
-          imageUrl: "https://themewagon.github.io/snapshot/images/model-5.jpg",
-          type: "Nature",
-          title: "Beautiful Work",
+          imageUrl: "https://res.cloudinary.com/dewnyzbmg/image/upload/v1695873204/WhatsApp_Image_2023-07-21_at_7.06.01_AM_tptfm8.jpg",
+          type: "Event",
+          title: "Pembinaan Wali Kelas",
         },
       ];
 
@@ -68,19 +69,19 @@ const Gallery = () => {
         <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Photo Gallery</h1>
         <p className="text-gray-400 w-full lg:w-1/2">Welcome to ConnexSoft's photo gallery, where we showcase a collection of captivating images. Explore our visual journey through these photos.</p>
         <div className="w-full">
-        <div className=" ">
-          <div className="flex flex-col md:grid md:grid-cols-3 h-full gap-0 flex-wrap mx-2 md:mx-0">
+        <div className="mt-8">
+          <div className="flex flex-col md:grid md:grid-cols-2 h-full gap-0 flex-wrap mx-2 md:mx-0">
             {galleryTab.map((x, index) => {
               return (
-                <div key={index} className="md:h-[50vw] h-screen relative">
+                <div key={index} className="md:h-[40vw] m-2 h-screen relative">
                   <div className="group h-full">
                     <div
                       className="bg-cover bg-center h-full w-full bg-no-repeat"
                       style={{ backgroundImage: `url("${x.imageUrl}")` }}
                     >
-                      <div className="text-3xl text-white absolute bottom-0 left-2 z-10">
-                        <div>{x.type}</div>
-                        <div>{x.title}</div>
+                      <div className="text-white bg-gradient-to-t pl-3 flex flex-col justify-center bg-gradient to-r from-black  to-transparent h-[90px] w-full absolute bottom-0 z-10">
+                        <div className="text-base text-slate-300">{x.type}</div>
+                        <div className="text-xl">{x.title}</div>
                       </div>
                     </div>
                     <div
@@ -91,7 +92,7 @@ const Gallery = () => {
                       }}
                     >
                       <p className="text-white">
-                        <AiOutlineExpandAlt className="text-5xl border w-16 h-16 bg-neutral-500 hover:bg-white hover:text-black p-3 cursor-pointer rounded-full" />
+                        <AiOutlineExpandAlt className="text-5xl border w-16 h-16 bg-neutral-500 hover:bg-white hover:text-black cursor-pointer rounded-full" />
                       </p>
                     </div>
                   </div>
@@ -101,6 +102,7 @@ const Gallery = () => {
           </div>
         </div>
         <Lightbox
+          className={'p-8'}
           index={galleryTab.findIndex((x) => x.imageUrl === image)}
           open={open}
           close={() => setOpen(false)}
@@ -110,7 +112,7 @@ const Gallery = () => {
         />
       </div>
       </div>
-
+      <Footer/>
     </>
   )
 }

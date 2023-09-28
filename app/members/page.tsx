@@ -46,7 +46,7 @@ const Member = () => {
         <p className="text-gray-400 w-full lg:w-1/2">ConnexSoft is home to a diverse team of talented developers, spanning across Backend, Frontend, UI/UX design, Mobile Apps and Product Engineering</p>
         <div className="member-list grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-8">
           {isLoading ? (
-            skeletonCard.map((index:number)=> <div className="w-full h-[12rem] rounded-xl  mt-4 bg-slate-600"></div>)
+            skeletonCard.map((index:number)=> <div className="w-full z-30 h-[12rem] rounded-xl  mt-4 bg-gradient-to-r from-slate-600 to-slate-700 shadow-slate-600/50 shadow-2xl"></div>)
           ) : (
             data?.map((item: MemberType, key: number) => (
               <Card key={key}>
