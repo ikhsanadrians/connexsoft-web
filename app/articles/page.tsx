@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import toSlug from '../../app/utils/toSlug';
 import Footer from "../components/footer";
-import Articles from "@/app/utils/types/articles"
+import Articles from "../utils/types/articles/articles";
 
 
 

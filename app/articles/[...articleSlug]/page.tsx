@@ -2,7 +2,8 @@
 
 import Navbar from "@/app/components/navbar"
 import { useState, useEffect } from "react"
-import Article from "@/app/utils/types/articles"
+import Article from "@/app/utils/types/articles/articles"
+import ArticleSection from "@/app/utils/types/articles/articleSection"
 import axios from 'axios';
 import Image from "next/image";
 import Giscus from "@giscus/react";
@@ -38,7 +39,7 @@ const ArticleDetail = ({ params }: { params: { articleSlug: string } }) => {
                         </div>
                         <div className="content-description">
                            {
-                              item.description.map((desc: any, index: number) => (
+                              item.description.map((desc: ArticleSection, index: number) => (
                                  <>
                                     <p className="text-red-500">{desc.section}</p>
                                     <p className="text-white">{desc.text}</p>
