@@ -42,7 +42,7 @@ const ArticleDetail = ({ params }: { params: { articleSlug: string } }) => {
                               item.description.map((desc: ArticleSection, index: number) => (
                                  <>                                 
                                     <p className="text-slate-300 font-semibold text-lg py-2">{desc.section}</p>
-                                    <p className="text-slate-200">{desc.text}</p>
+                                    <p className="text-slate-200 line-clamp-3 leading-loose indent-2">{desc.text}</p>
                                  </>
                               ))
                            }
