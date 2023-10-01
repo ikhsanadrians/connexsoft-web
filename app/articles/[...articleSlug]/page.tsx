@@ -34,8 +34,8 @@ const ArticleDetail = ({ params }: { params: { articleSlug: string } }) => {
                      </div>
                      <div className="text-content mt-4">
                         <div className="content-title my-3">
-                           <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">{item.title}</h1>
-                           <span className="flex items-center gap-2 text-slate-400">Write By : <span className="flex gap-2 items-center"><Image src={item.author_img} height={16} width={16} alt="author-picture"/> {item.author}</span> / 3 min read / Posted In : {item.post_date}</span>
+                           <h1 className="text-white font-[MonaReg] text-2xl lg:text-4xl">{item.title}</h1>
+                           <span className="flex items-center gap-1 lg:gap-2 text-slate-400 lg:text-base text-sm"><p className="lg:block hidden">Write By : </p><span className="flex gap-2 items-center"><Image src={item.author_img} height={16} width={16} alt="author-picture"/> {item.author}</span> / 3 min read / <p className="lg:block hidden"> Posted In : </p>{item.post_date}</span>
                         </div>
                         <div className="content-description">
                            {
