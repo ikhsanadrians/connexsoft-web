@@ -33,16 +33,16 @@ const ArticleDetail = ({ params }: { params: { articleSlug: string } }) => {
                         <img src={item.thumbnail} className="w-full h-full object-cover" />
                      </div>
                      <div className="text-content mt-4">
-                        <div className="content-title">
+                        <div className="content-title my-3">
                            <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">{item.title}</h1>
                            <span className="flex items-center gap-2 text-slate-400">Write By : <span className="flex gap-2 items-center"><Image src={item.author_img} height={16} width={16} alt="author-picture"/> {item.author}</span> / 3 min read / Posted In : {item.post_date}</span>
                         </div>
                         <div className="content-description">
                            {
                               item.description.map((desc: ArticleSection, index: number) => (
-                                 <>
-                                    <p className="text-red-500">{desc.section}</p>
-                                    <p className="text-white">{desc.text}</p>
+                                 <>                                 
+                                    <p className="text-slate-300 font-semibold text-lg py-2">{desc.section}</p>
+                                    <p className="text-slate-200">{desc.text}</p>
                                  </>
                               ))
                            }
