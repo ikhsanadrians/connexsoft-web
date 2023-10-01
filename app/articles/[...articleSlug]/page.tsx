@@ -29,8 +29,8 @@ const ArticleDetail = ({ params }: { params: { articleSlug: string } }) => {
             {
                allArticle.filter((item) => item.slug == params.articleSlug).map((item: Article, index: number) => (
                   <div>
-                     <div className="image-content w-full h-80 overflow-hidden object-cover rounded-md">
-                        <img src={item.thumbnail} className="w-full h-full object-cover" />
+                     <div className="image-content w-full h-80 overflow-hidden object-cover rounded-md shadow-slate-600/50 shadow-2xl">
+                        <img src={item.thumbnail} className="w-full h-full object-cover " />
                      </div>
                      <div className="text-content mt-4">
                         <div className="content-title my-3">
