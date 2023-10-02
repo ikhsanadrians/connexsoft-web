@@ -1,12 +1,16 @@
-interface projectType {
+export interface projectType {
    member_name : string,
    member_picture : string,
    quotes : string,
    project_name : string,
    project_description : string,
    project_techstack : string[],
-   project_link : string,
+   project_link : projectLink[] ,
 }
 
-export default projectType;
+export type projectLink = {
+   url : string,
+   github : string,
+}
+
 
