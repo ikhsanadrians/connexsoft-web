@@ -19,12 +19,19 @@ const Gallery = () => {
   const [galleryValue,setGalleryValue] = useState<Gallery[]>([]);
   const [open, setOpen] = useState<boolean>(false);
   const [image, setImage] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   
  
   const getGalleryValue = () => {
       axios.get("https://connexsoft-team.github.io/api/v1/gallery.json").
-      then((response)=>setGalleryValue(response.data)).
-      catch((err)=>console.error("Error While Fetching Data!"))
+      then((response)=>{
+        setGalleryValue(response.data)
+        setIsLoading(false)
+      }).
+      catch((err)=> {
+        console.error("Error While Fetching Data!")
+        setIsLoading(false)
+      })
   }
 
   useEffect(()=>{
@@ -42,7 +49,10 @@ const Gallery = () => {
       { src: item.imageUrl, width: 2048, height: 1365 },
       { src: item.imageUrl, width: 3840, height: 2560 },
     ],
-  }));
+  })); 
+
+
+  let skeletonCard = Array(34).fill(0);
 
   
   return (
@@ -54,9 +64,13 @@ const Gallery = () => {
         <div className="w-full">
         <div className="mt-8">
           <div className="flex flex-col md:grid md:grid-cols-2 h-full gap-0 flex-wrap lg:mx-2 md:mx-0">
-            {galleryValue.map((x, index) => {
+            {
+             isLoading ? (
+              skeletonCard.map((index:number) => <div className="bg-[#161b21] relative p-4 border-[1.5px] z-99 text-white border-[#2d3139] mt-6 rounded-md w-full lg:h-[27vw] m-2 h-[25rem] relative shadow-slate-600/50 shadow-2xl hover:scale-105 duration-200 flex flex-col  overflow-hidden cursor-pointer "></div>)
+             ) : (
+            galleryValue.map((x, index) => {
               return (
-                <div key={index} className="md:h-[30vw] m-2 h-screen relative">
+                <div key={index} className="lg:h-[27vw]  m-2 h-[25rem] relative">
                   <div className="group h-full">
                     <div
                       className="bg-cover bg-center h-full w-full bg-no-repeat"
@@ -81,7 +95,7 @@ const Gallery = () => {
                   </div>
                 </div>
               );
-            })}
+            }) ) } 
           </div>
         </div>
         <Lightbox

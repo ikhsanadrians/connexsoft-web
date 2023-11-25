@@ -5,12 +5,12 @@ export interface projectType {
    project_name : string,
    project_description : string,
    project_techstack : string[],
-   project_link : projectLink[] ,
+   project_link : {
+      url: string,
+      github: string,
+   },
 }
 
-export type projectLink = {
-   url : string,
-   github : string,
-}
+
 
 

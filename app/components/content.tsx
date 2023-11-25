@@ -92,7 +92,7 @@ export default function Content() {
 
                     </Card>
                 </div>
-                <div className="show-more mt-20 cursor-pointer text-white text-end">
+                <div className="show-more mt-20 cursor-pointer text-slate-300 text-end">
                     <Link href="/members">
                         Lihat Selengkapnya
                     </Link>
@@ -154,7 +154,7 @@ export default function Content() {
                         </div>
                     </Card>
                 </div>
-                <div className="show-more mt-20 cursor-pointer text-white text-end">
+                <div className="show-more mt-20 cursor-pointer text-slate-300 text-end">
                     <Link href="/articles">
                         Lihat Selengkapnya
                     </Link>

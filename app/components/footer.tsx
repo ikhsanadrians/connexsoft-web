@@ -26,10 +26,10 @@ export default function footer() {
               <li>Artikel</li>
             </ul>
             <ul className="text-slate-300 flex flex-col gap-5">
-              <li>Twitter</li>
-              <li>Instagram</li>
-              <li>CodePen</li>
-              <li>Github</li>
+              <li className="cursor-pointer hover:underline">Twitter</li>
+              <li className="cursor-pointer hover:underline"><a href="https://www.instagram.com/connexsoft55" target="_blank">Instagram</a></li>
+              <li className="cursor-pointer hover:underline">CodePen</li>
+              <li className="cursor-pointer hover:underline"><a href="https://github.com/Connexsoft-Team" target="_blank">Github</a></li>
             </ul>
             <iframe
               className="lg:block md:block hidden"
@@ -43,6 +43,11 @@ export default function footer() {
             />
           </div>
         </div>
+      </div>
+      <div className="address flex justify-center py-8">
+        <p className="text-slate-300 font-bold">
+              Connexsoft Head Office - Ruang Teori 1 SMKN 10 Jakarta
+        </p>
       </div>
     </footer>
   );

@@ -14,6 +14,8 @@ import Articles from "../utils/types/articles/articles";
 
 const Articles = () => {
   const [Articles, setArticles] = useState<Articles[]>([])
+  const [isLoading,setIsLoading] = useState<boolean>(true);
+
   const router = useRouter()
 
   const navigateToDetail = (slug:string) => {
