@@ -44,9 +44,9 @@ export default function footer() {
           </div>
         </div>
       </div>
-      <div className="address flex justify-center py-8">
-        <p className="text-slate-300 font-bold">
-              Connexsoft Head Office - Ruang Teori 1 SMKN 10 Jakarta
+      <div className="address flex justify-start lg:justify-center py-8 lg:px-11 px-8">
+        <p className="text-slate-300 font-bold flex lg:flex-row flex-col gap-2">
+              Connexsoft Headquarter  <span className="font-normal"> Ruang Teori 1 SMKN 10 Jakarta</span>
         </p>
       </div>
     </footer>
