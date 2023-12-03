@@ -1,6 +1,8 @@
 import React from "react";
 import CnxIcon from "../../public/images/connexsoft.png";
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function footer() {
   return (
@@ -20,10 +22,11 @@ export default function footer() {
         <div className="connexsoft-links flex flex-col mt-4">
           <div className="menus flex md:flex-row flex-col lg:flex-row md:gap-20 gap-8 lg:gap-20">
             <ul className="text-slate-300 flex flex-col gap-5">
-              <li>Home</li>
-              <li>Daftar Member</li>
-              <li>Galeri</li>
-              <li>Artikel</li>
+              <li><Link href={"/"}>Home</Link></li>
+              <li><Link href={"/members"}>Daftar Member</Link></li>
+              <li><Link href={"/gallery"}>Galeri</Link></li>
+              <li><Link href={"/articles"}>Artikel</Link></li>
+              <li><Link href={"https://connexsoft-team.github.io/wiki"} target="_blank">Dokumentasi</Link></li>
             </ul>
             <ul className="text-slate-300 flex flex-col gap-5">
               <li className="cursor-pointer hover:underline">Twitter</li>

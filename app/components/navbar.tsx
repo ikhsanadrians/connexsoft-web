@@ -45,6 +45,7 @@ function Navbar() {
             <li className="duration-200 hover:-translate-y-1"><Link href={"/gallery"}>Gallery</Link></li>
             <li className="duration-200 hover:-translate-y-1"><Link href={"/articles"}>Articles</Link></li>
             <li className="duration-200 hover:-translate-y-1"><Link href={"/projects"}>Projects</Link></li>
+            <li className="duration-200 hover:-translate-y-1"><Link href={"https://connexsoft-team.github.io/wiki"} target="_blank">Docs</Link></li>
           </ul>
         </div>
         <TiThMenu onClick={navMobileHandler} color="white" size={25} className="block lg:hidden md:hidden"/>
@@ -57,6 +58,7 @@ function Navbar() {
             <Link href={"/gallery"}>Galleri</Link>
             <Link href={"/articles"}>Artikel</Link>
             <Link href={"/projects"}>Project</Link>
+            <Link href={"https://connexsoft-team.github.io/wiki"} target="_blank">Docs</Link>
           </ul>
     </div>
     </>
