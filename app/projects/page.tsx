@@ -41,9 +41,12 @@ const Projects = () => {
             projects?.map((item:projectType,index:number)=>(
               <div className="bg-[#161b21] relative p-4 border-[1.5px] z-99 text-white border-[#2d3139] mt-6 rounded-md w-full h-full shadow-slate-600/50 shadow-2xl hover:scale-105 duration-200 flex flex-col  overflow-hidden cursor-pointer">
                
-                <div className="profiles flex items-center gap-2">
-                   <Image alt="profile-picture" src={item.member_picture} width={20} height={20} />
-                   <span className="flex gap-2 text-slate-300">{item.member_name}  / <p className="font-semibold text-white">{item.project_name}</p></span>
+                <div className="profiles">
+                    <p className="font-semibold text-white">{item.project_name}</p>
+                   <div className="profile flex items-center gap-2">
+                       <Image alt="profile-picture" src={item.member_picture} width={20} height={20} /> 
+                       <span className="flex gap-2 text-slate-300">@{item.member_name}</span>
+                   </div>
                 </div>
                 <div className="description text-slate-200">
                   <p>{item.project_description}</p>
