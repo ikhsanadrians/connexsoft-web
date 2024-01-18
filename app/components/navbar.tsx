@@ -5,8 +5,10 @@ import Image from "next/image";
 import LogoConnexsoft from "../../public/images/connexsoft.png";
 import { Roboto } from "next/font/google";
 import "../../public/css/app.css";
+import  Bookmark  from './bookmark';
 import Link from "next/link";
 import { TiThMenu } from "react-icons/ti";
+
 
 function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -26,10 +28,11 @@ function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); 
 
   return (
     <>
+    <Bookmark />
     <header className={`sticky top-0 z-99 ${scrolled && 'header drop-shadow-lg'}`}>
       <div className="header-wrapper container lg:px-11 md:px-0 px-6 mx-auto  w-full h-12 py-10 flex items-center justify-between">
         <div className="title flex items-center z-30">
