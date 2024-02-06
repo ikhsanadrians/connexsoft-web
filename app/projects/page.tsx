@@ -65,8 +65,8 @@ const Projects = () => {
                <div className="link-wrapper absolute bottom-4 right-4">
                 <div className="links flex items-center gap-2 my-2">
                       <>
-                         <a href={item.project_link.url} className="group"><TfiNewWindow size={20} className="group-hover:fill-red-500"/></a>
-                         <a href={item.project_link.github}><AiOutlineGithub size={20}/></a>
+                         <a target="_blank" href={item.project_link.url} className="group"><TfiNewWindow size={20} className="group-hover:fill-red-500"/></>
+                         <a target="_blank" href={item.project_link.github}><AiOutlineGithub size={20}/></>
                       </>
                 </div>
                </div>
