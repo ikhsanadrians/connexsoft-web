@@ -6,8 +6,8 @@ import NextJsIcon from "../../public/images/next-js.svg";
 
 export default function footer() {
   return (
-    <footer className="bg-black mt-12 min-h-64 max-h-full z-99">
-      <div className="container mx-auto py-8 lg:px-11 px-8 flex flex-col md:flex-row lg:flex-row justify-between">
+    <footer className="bg-black mt-12 min-h-64 max-h-full z-99 relative overflow-hidden">
+      <div className="container mx-auto py-8 lg:px-11 px-8 flex flex-col md:flex-row lg:flex-row justify-between z-90">
         <div className="connexsoft-header flex flex-col">
           <div className="connexicon flex flex-row gap-1 items-center">
             <Image src={CnxIcon} alt="logo-connexsoft" height={20}></Image>
@@ -35,7 +35,7 @@ export default function footer() {
               <li className="cursor-pointer hover:underline"><a href="https://github.com/Connexsoft-Team" target="_blank">Github</a></li>
             </ul>
             <iframe
-              className="lg:block md:block hidden"
+              className="lg:block md:block hidden z-90"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0599995676644!2d106.86723267423363!3d-6.255826361247746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f301ea1c2901%3A0xfc9931c7b0225846!2sSMK%20Negeri%2010%20Jakarta!5e0!3m2!1sid!2sid!4v1687111205866!5m2!1sid!2sid"
               width="300"
               height="180"
@@ -47,12 +47,12 @@ export default function footer() {
           </div>
         </div>
       </div>
-      <div className="address flex justify-start lg:justify-center py-8 lg:px-11 px-8">
+      <div className="address z-90 flex justify-start lg:justify-center py-8 lg:px-11 px-8">
         <p className="text-slate-300 font-bold flex lg:flex-row flex-col gap-2">
               Connexsoft Headquarter  <span className="font-normal"> Ruang Teori 1 SMKN 10 Jakarta</span>
         </p>
       </div>
-      <div className="build-with flex justify-start lg:justify-center pb-8 lg:px-0 px-8">
+      <div className="build-with z-90 flex justify-start lg:justify-center pb-8 lg:px-0 px-8">
         <div className="wrappers flex-col flex items-center">
         <p className="text-slate-400 text-center mb-2 text-sm">This Website is Build Using</p> 
         <div className="flex self-start lg:self-center">
@@ -64,6 +64,9 @@ export default function footer() {
           
         </div>
       </div>
+      
+      <div className="w-64 h-72 absolute top-12 right-0 bg-gradient-to-r from-indigo-600 via-indigo-200 to-indigo-50 blur-[180px] opacity-70 z-30"></div>
+      <div className="w-64 h-72 absolute -bottom-16 bg-gradient-to-r from-indigo-600 via-indigo-200 to-indigo-50 blur-[180px] opacity-70 z-30"></div>
     </footer>
   );
 }

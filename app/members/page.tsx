@@ -8,13 +8,9 @@ import axios from "axios";
 import Drone from "../../public/images/hero-drone.webp";
 import Stars from "../../public/images/bg-stars-1.webp";
 import SingleStars from "../../public/images/stars.png";
+import { MemberType } from "../utils/types/member/member";
 
-type MemberType = {
-  member_picture: string;
-  member_name: string;
-  role: string;
-  quotes: string;
-};
+
 
 const Member = () => {
   const [data, setData] = useState<MemberType[]>([]);
@@ -33,7 +29,7 @@ const Member = () => {
   }, []);
 
 
-  let skeletonCard = Array(34).fill(0);
+  const skeletonCard = Array(34).fill(0);
 
   return (
     <>
@@ -42,9 +38,9 @@ const Member = () => {
      <Image alt="stars" src={Stars} className="absolute lg:block hidden top-0 left-0 h-[100%] select-none pointer-events-none"/>
      <Image alt="drone" src={Drone} className="absolute lg:block hidden right-0 mr-8 drop-shadow-lg select-none pointer-events-none" height={280} width={280}/>
      <Image alt="single-stars" src={SingleStars} className="brightness-0 invert-[1] absolute -top-14 -left-36 opacity-20 select-none pointer-events-none"/>
-        <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Members</h1>
-        <p className="text-gray-400 w-full lg:w-1/2">ConnexSoft is home to a diverse team of talented developers, spanning across Backend, Frontend, UI/UX design, Mobile Apps and Product Engineering</p>
-        <div className="member-list grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-8">
+        <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl" data-aos="fade-up">Members</h1>
+        <p className="text-gray-400 w-full lg:w-1/2" data-aos="fade-left">ConnexSoft is home to a diverse team of talented developers, spanning across Backend, Frontend, UI/UX design, Mobile Apps and Product Engineering</p>
+        <div data-aos="fade-up" className="member-list grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-8">
           {isLoading ? (
             skeletonCard.map((index:number)=> <div className="w-full z-30 h-[12rem] rounded-xl  mt-4 bg-gradient-to-r from-slate-600 to-slate-700 shadow-slate-600/50 shadow-2xl"></div>)
           ) : (

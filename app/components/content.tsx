@@ -9,8 +9,8 @@ export default function Content() {
     return (
         <div className="container mx-auto py-12 lg:px-11 px-8 relative overflow-hidden">
             <div className="text-wrappers who-are-we">
-                <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Siapa Kita?</h1>
-                <p className="text-white opacity-70 mt-4">
+                <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl" data-aos="fade-up">Siapa Kita?</h1>
+                <p className="text-white opacity-70 mt-4" data-aos="fade-up">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, molestias at recusandae fugit reiciendis vel ut id sequi minus quisquam commodi nostrum odio delectus! Quibusdam omnis corporis odio ipsam dolore vitae distinctio ipsum a! Perferendis ratione mollitia debitis quidem. Quae assumenda optio quo, aliquid quam ullam deleniti cupiditate nesciunt eum sit itaque voluptas commodi cum at architecto incidunt. Numquam iure quas eveniet vitae dignissimos placeat sint totam provident quis? Assumenda, est commodi iure quaerat possimus consequatur exercitationem numquam tenetur. Provident eaque adipisci saepe maiores deleniti nesciunt laudantium et, unde accusamus earum nihil porro veritatis, qui, ut corporis esse. Corrupti, dolor!
                 </p>
             </div>
@@ -20,8 +20,8 @@ export default function Content() {
                 className="absolute -top-24 -z-10 pointer-events-none select-none"
             ></Image>
             <div className="text-wrappers what-are-we-doing mt-12 pt-12 border-t-2">
-                <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Apa Yang Kita Lakukan?</h1>
-                <div className="cards-wrapper grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl" data-aos="fade-up">Apa Yang Kita Lakukan?</h1>
+                <div className="cards-wrapper grid grid-cols-1 lg:grid-cols-3 gap-4" data-aos="fade-left">
                     <Card>
                         <svg className="fill-white" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M102-160q-20 0-33.5-13.5T55-207v-233q0-27.859 9.5-53.93Q74-520 95-532.55V-639q0-54.667 38-93.333Q171-771 226-771h180q21 0 40.149 9.031T480-739q14.702-13.938 33.351-22.969T553-771h180q54.667 0 93.833 38.667Q866-693.667 866-639v106.45q20 12.55 30 38.62 10 26.071 10 53.93v233q0 20-14.088 33.5-14.087 13.5-34 13.5Q838-160 824.5-173.5T811-207v-33H149v33q0 20-13.5 33.5T102-160Zm408-380h261v-99q0-16.275-10.912-26.638Q749.175-676 733-676H541q-13.9 0-22.45 11.05Q510-653.9 510-639v99Zm-321 0h261v-99q0-15-8.55-26T419-676H226q-15.175 0-26.087 10.912Q189-654.175 189-639v99Zm-40 206h662v-115q0-13-8.912-22-8.913-9-22.088-9H180q-13.175 0-22.087 8.913Q149-462.175 149-449v115Zm662 0H149h662Z" /></svg>
                         <h1 className="text-white text-lg opacity-70">Sleep</h1>
@@ -40,8 +40,8 @@ export default function Content() {
                 </div>
             </div>
             <div className="members-wrappers connexsoft-members mt-20 pt-12 border-t-2">
-                <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Members</h1>
-                <div className="cards-members-wrappers grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl" data-aos="fade-up">Members</h1>
+                <div className="cards-members-wrappers grid grid-cols-1 lg:grid-cols-3 gap-4" data-aos="fade-right">
                     <Card>
                         <div className="members-wrapper flex flex-row justify-center  gap-4 w-full h-full items-center">
                             <div className="member-pictures">
@@ -92,15 +92,15 @@ export default function Content() {
 
                     </Card>
                 </div>
-                <div className="show-more mt-20 cursor-pointer text-slate-300 text-end">
+                <div data-aos="fade-right" className="show-more mt-20 cursor-pointer text-slate-300 text-end">
                     <Link href="/members">
                         Lihat Selengkapnya
                     </Link>
                 </div>
             </div>
             <div className="articles-wrappers connexsoft-members mt-20 pt-12 border-t-2">
-                <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Articles</h1>
-                <div className="articles-wrappers grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <h1 data-aos="fade-top" className="text-white font-[MonaReg] text-3xl lg:text-4xl">Articles</h1>
+                <div data-aos="fade-left" className="articles-wrappers grid grid-cols-1 lg:grid-cols-3 gap-4">
                     <Card>
                         <div className="article-card-wrapper flex flex-col justify-between relative w-full h-full">
                             <div className="article-title text-slate-300">
@@ -154,7 +154,7 @@ export default function Content() {
                         </div>
                     </Card>
                 </div>
-                <div className="show-more mt-20 cursor-pointer text-slate-300 text-end">
+                <div data-aos="fade-right" className="show-more mt-20 cursor-pointer text-slate-300 text-end">
                     <Link href="/articles">
                         Lihat Selengkapnya
                     </Link>

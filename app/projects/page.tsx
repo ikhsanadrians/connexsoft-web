@@ -25,15 +25,15 @@ const Projects = () => {
 
 }, []);
 
-  let skeletonCard = Array(34).fill(0);
+  const skeletonCard = Array(34).fill(0);
   
   return(
      <>
        <Navbar/>
        <div className="container mx-auto mt-6 lg:py-0 lg:px-11 py-4 px-8 pb-8 relative mb-8">
-        <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Projects</h1>
-        <p className="text-gray-400 w-full lg:w-1/2">Welcome to ConnexSoft's Projects Page, Discover ConnexSoft Member's innovative projects, showcasing our commitment to excellence and cutting-edge solutions.</p>
-        <div className="project-list grid md:grid-cols-2 grid-cols-1 lg:grid-cols-2 gap-2 pb-8"> 
+        <h1 data-aos="fade-up" className="text-white font-[MonaReg] text-3xl lg:text-4xl">Projects</h1>
+        <p data-aos="fade-left" className="text-gray-400 w-full lg:w-1/2">Welcome to ConnexSoft's Projects Page, Discover ConnexSoft Member's innovative projects, showcasing our commitment to excellence and cutting-edge solutions.</p>
+        <div data-aos="fade-up" className="project-list grid md:grid-cols-2 grid-cols-1 lg:grid-cols-2 gap-2 pb-8"> 
           { 
             isLoading ? (
               skeletonCard.map((index:number) => <div className="bg-[#161b21] relative p-4 border-[1.5px] z-99 text-white border-[#2d3139] mt-6 rounded-md w-full h-[8rem] shadow-slate-600/50 shadow-2xl hover:scale-105 duration-200 flex flex-col  overflow-hidden cursor-pointer "></div>)

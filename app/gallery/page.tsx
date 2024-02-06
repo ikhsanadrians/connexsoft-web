@@ -59,14 +59,14 @@ const Gallery = () => {
     <>
       <Navbar />
       <div className="container mx-auto mt-6 lg:py-0 lg:px-11 py-4 px-8 pb-8 relative">
-        <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Photo Gallery</h1>
-        <p className="text-gray-400 w-full lg:w-1/2">Welcome to ConnexSoft's photo gallery, where we showcase a collection of captivating images. Explore our visual journey through these photos.</p>
+        <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl" data-aos="fade-up">Photo Gallery</h1>
+        <p className="text-gray-400 w-full lg:w-1/2" data-aos="fade-left">Welcome to ConnexSoft's photo gallery, where we showcase a collection of captivating images. Explore our visual journey through these photos.</p>
         <div className="w-full">
         <div className="mt-8">
-          <div className="flex flex-col md:grid md:grid-cols-2 h-full gap-0 flex-wrap lg:mx-2 md:mx-0">
+          <div data-aos="fade-up" className="flex flex-col md:grid md:grid-cols-2 h-full gap-0 flex-wrap lg:mx-2 md:mx-0">
             {
              isLoading ? (
-              skeletonCard.map((index:number) => <div className="bg-[#161b21] relative p-4 border-[1.5px] z-99 text-white border-[#2d3139] mt-6 rounded-md w-full lg:h-[27vw] m-2 h-[25rem] relative shadow-slate-600/50 shadow-2xl hover:scale-105 duration-200 flex flex-col  overflow-hidden cursor-pointer "></div>)
+              skeletonCard.map((index:number) => <div className="bg-[#161b21] relative p-4 border-[1.5px] z-99 text-white border-[#2d3139] mt-6 rounded-md w-full lg:h-[27vw] m-2 h-[25rem] shadow-slate-600/50 shadow-2xl hover:scale-105 duration-200 flex flex-col  overflow-hidden cursor-pointer "></div>)
              ) : (
             galleryValue.map((x, index) => {
               return (

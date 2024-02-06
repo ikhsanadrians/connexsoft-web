@@ -22,10 +22,18 @@ const Articles = () => {
        router.push(`/articles/${slug}`)
   }
 
+  const skeletonCard = Array(2).fill(0);
+
   useEffect(() => {
     axios.get("https://connexsoft-team.github.io/api/v1/articles.json").
-      then((response) => setArticles(response.data)).
-      catch((err) => console.error(`Error While Fetching Data!: ${err}`))
+      then((response) => {
+        setArticles(response.data)
+        setIsLoading(false)
+      }).
+      catch((err) => {
+        console.error(`Error While Fetching Data!: ${err}`)
+        setIsLoading(false)
+      })
   }, [])
 
   
@@ -34,10 +42,12 @@ const Articles = () => {
     <>
       <Navbar />
       <div className="container mx-auto mt-6 lg:py-0 lg:px-11 py-4 px-8 pb-8 relative mb-8">
-        <h1 className="text-white font-[MonaReg] text-3xl lg:text-4xl">Articles</h1>
-        <p className="text-gray-400 w-full lg:w-1/2">Welcome to ConnexSoft's article page, your gateway to captivating narratives and insightful content. Join us as we explore a world of engaging insights and thought-provoking perspectives.</p>
-        <div className="card-list grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-3 pb-8">
-          {
+        <h1 data-aos="fade-up" className="text-white font-[MonaReg] text-3xl lg:text-4xl">Articles</h1>
+        <p data-aos="fade-left" className="text-gray-400 w-full lg:w-1/2">Welcome to ConnexSoft's article page, your gateway to captivating narratives and insightful content. Join us as we explore a world of engaging insights and thought-provoking perspectives.</p>
+        <div data-aos="fade-left" className="card-list grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-3 pb-8">
+          {  isLoading ? (
+            skeletonCard.map((index:number)=> <div className="w-full z-30 h-[12rem] rounded-xl  mt-4 bg-gradient-to-r from-slate-600 to-slate-700 shadow-slate-600/50 shadow-2xl"></div>)
+          ) : (
             Articles.map((item: Articles, key: number) => ( 
               <div onClick={()=>navigateToDetail(item.slug)} className="bg-[#161b21] relative border-[1.5px] z-99  border-[#2d3139] mt-6 rounded-md w-full h-full shadow-slate-600/50 shadow-2xl hover:scale-105 duration-200 flex flex-col  overflow-hidden cursor-pointer" key={key}>
                 <div className="img w-full h-36 object-cover">
@@ -56,6 +66,8 @@ const Articles = () => {
 
               </div>
             ))
+          )
+           
 
           }
 
